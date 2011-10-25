@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html;charset=utf-8">
+  <title>BleachBottle from Mozilla</title>
+</head>
+
+<body>
+
+<h1>BleachBottle</h1>
+
+
+{% if clean is not none %}
+<div>
+  <h2>You entered:</h2>
+  <div>
+    {{ clean }}
+  </div>
+</div>
+{% endif %}
+
+
+<form action="/" method="get">
+  <h2>Got some input?</h2>
+  <textarea name="input" rows="8" cols="40"></textarea>
+  <input type="submit" value="Try your luck!">
+</form>
+
+<p>The rules go here!</p>
+
+</body>
+</html>
