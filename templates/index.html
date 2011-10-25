@@ -10,7 +10,7 @@
 <h1>BleachBottle</h1>
 
 
-{% if clean is not none %}
+{% if clean %}
 <div>
   <h2>You entered:</h2>
   <div>
@@ -22,7 +22,7 @@
 
 <form action="/" method="get">
   <h2>Got some input?</h2>
-  <textarea name="input" rows="8" cols="40"></textarea>
+  <textarea name="input" rows="8" cols="40">{{ clean }}</textarea>
   <input type="submit" value="Try your luck!">
 </form>
 
