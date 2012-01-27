@@ -6,9 +6,9 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    dirty = request.args.get('input', None)
+    dirty = request.form.get('input', None)
     if dirty:
         clean = jinja2.Markup(bleach.clean(dirty))
     else:
